@@ -103,7 +103,7 @@ class GitHubPrivateRepositoryReleaseDownloadStrategy < GitHubPrivateRepositoryDo
 
   def fetch_release_metadata
     release_url = "https://api.github.com/repos/#{@owner}/#{@repo}/releases/tags/#{@tag}"
-    GitHub.open_api(release_url)
+    GitHub.open_rest(release_url, data: nil, data_binary_path: nil, request_method: nil, scopes: [].freeze, parse_json: true)
   end
 end
 
