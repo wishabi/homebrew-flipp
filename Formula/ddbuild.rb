@@ -10,19 +10,19 @@ class Ddbuild < Formula
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.7/datadog-helper-go_0.2.7_Darwin_x86_64.tar.gz", :using => :github_private_repo
+    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.7/datadog-helper-go_0.2.7_Darwin_x86_64.tar.gz", :using => :github_private_release
     sha256 "4fd7abebad4f9bace341540d06559238f5818a1f25f89282e9fb6dc31aa6586e"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.7/datadog-helper-go_0.2.7_Darwin_arm64.tar.gz", :using => :github_private_repo
+    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.7/datadog-helper-go_0.2.7_Darwin_arm64.tar.gz", :using => :github_private_release
     sha256 "60cde96f390868db63b5e274c859b480bc9c9ca94fe913b57a466f5d910925c3"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.7/datadog-helper-go_0.2.7_Linux_x86_64.tar.gz", :using => :github_private_repo
+    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.7/datadog-helper-go_0.2.7_Linux_x86_64.tar.gz", :using => :github_private_release
     sha256 "11f29035fb2454b2693c12804935981007d746af1160f07d001c4ff44edd8030"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.7/datadog-helper-go_0.2.7_Linux_arm64.tar.gz", :using => :github_private_repo
+    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.7/datadog-helper-go_0.2.7_Linux_arm64.tar.gz", :using => :github_private_release
     sha256 "2deb609fb8db9ae4e5728840966e44b6ad0e6027693dae09f9fd4f44b30ddb9e"
   end
 

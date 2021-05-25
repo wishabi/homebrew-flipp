@@ -2,7 +2,7 @@ require "download_strategy"
 
 # GitHubPrivateRepositoryDownloadStrategy downloads contents from GitHub
 # Private Repository. To use it, add
-# `:using => :github_private_release` to the URL section of
+# `:using => :github_private_repo` to the URL section of
 # your formula. This download strategy uses GitHub access tokens (in the
 # environment variables `HOMEBREW_GITHUB_API_TOKEN`) to sign the request.  This
 # strategy is suitable for corporate use just like S3DownloadStrategy, because
@@ -113,7 +113,7 @@ class DownloadStrategyDetector
 
       def detect_from_symbol(symbol)
         case symbol
-        when :github_private_release
+        when :github_private_repo
           GitHubPrivateRepositoryDownloadStrategy
         when :github_private_release
           GitHubPrivateRepositoryReleaseDownloadStrategy
