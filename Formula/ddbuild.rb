@@ -6,24 +6,24 @@ require_relative "../lib/private"
 class Ddbuild < Formula
   desc "Process concise files and use templates to generate Datadog input files for CI support."
   homepage ""
-  version "0.2.7"
+  version "0.2.8"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.7/datadog-helper-go_0.2.7_Darwin_x86_64.tar.gz", :using => :github_private_release
-    sha256 "4fd7abebad4f9bace341540d06559238f5818a1f25f89282e9fb6dc31aa6586e"
+    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.8/datadog-helper-go_0.2.8_Darwin_x86_64.tar.gz", :using => :github_private_repo
+    sha256 "2acd7d831872ddc14c8b938caa578da6346132ae97e0f16eddd2995c1222bfb0"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.7/datadog-helper-go_0.2.7_Darwin_arm64.tar.gz", :using => :github_private_release
-    sha256 "60cde96f390868db63b5e274c859b480bc9c9ca94fe913b57a466f5d910925c3"
+    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.8/datadog-helper-go_0.2.8_Darwin_arm64.tar.gz", :using => :github_private_repo
+    sha256 "66e5df1cd6f8dae6ea461595fcbf97f5cd8f36559a62cd972c0f8d339637f513"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.7/datadog-helper-go_0.2.7_Linux_x86_64.tar.gz", :using => :github_private_release
-    sha256 "11f29035fb2454b2693c12804935981007d746af1160f07d001c4ff44edd8030"
+    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.8/datadog-helper-go_0.2.8_Linux_x86_64.tar.gz", :using => :github_private_repo
+    sha256 "a05f93cf02825146f50db7bed5f15e6c1d370ab04d3d6cd1b5d7c19423590097"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.7/datadog-helper-go_0.2.7_Linux_arm64.tar.gz", :using => :github_private_release
-    sha256 "2deb609fb8db9ae4e5728840966e44b6ad0e6027693dae09f9fd4f44b30ddb9e"
+    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.8/datadog-helper-go_0.2.8_Linux_arm64.tar.gz", :using => :github_private_repo
+    sha256 "a9ffe760272b95dd8d184edc43a5821a92826547a349579ed2943184bfe95f31"
   end
 
   def install
