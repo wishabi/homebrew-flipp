@@ -6,24 +6,24 @@ require_relative "../lib/private"
 class Ddbuild < Formula
   desc "Process concise files and use templates to generate Datadog input files for CI support."
   homepage ""
-  version "0.2.15"
+  version "0.2.22"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.15/ddbuild_0.2.15_darwin_amd64.tar.gz", :using => :github_private_release
-    sha256 "15ce3da028f8df7d70b7e7dd2c81bf160a8daa12df81b316788737a40ce87cb2"
+    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.22/ddbuild_0.2.22_darwin_amd64.tar.gz", :using => :github_private_release
+    sha256 "6325a9b2ff73e49081a621f4831a370b60c38a3681dc9474b52f65a0c9d73075"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.15/ddbuild_0.2.15_darwin_arm64.tar.gz", :using => :github_private_release
-    sha256 "177a02c8f3cc06687819496c689235e970d176285cb066dbc71eca14872fd078"
+    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.22/ddbuild_0.2.22_darwin_arm64.tar.gz", :using => :github_private_release
+    sha256 "ecc209f84ab01e825ef99813745f837adde1ae7aaf56c7eb9f3636f2eb583880"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.15/ddbuild_0.2.15_linux_amd64.tar.gz", :using => :github_private_release
-    sha256 "135576010c41fa62e381df41576263ef7a45d9884b9d2e19cb58143419713364"
+    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.22/ddbuild_0.2.22_linux_amd64.tar.gz", :using => :github_private_release
+    sha256 "5b1f4464759a4b6225e30b827b2e1190da4022b0d458506d876ec0ce31b2d2b4"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.15/ddbuild_0.2.15_linux_arm64.tar.gz", :using => :github_private_release
-    sha256 "fb7d33234984db106179b1dd7650fc716488a5905c94b41adcefdbdf11da2d3c"
+    url "https://github.com/wishabi/datadog-helper-go/releases/download/v0.2.22/ddbuild_0.2.22_linux_arm64.tar.gz", :using => :github_private_release
+    sha256 "0d55d14afbd9f421186374280d9d026506a0676859f804e08edf8b865cf61358"
   end
 
   def install
