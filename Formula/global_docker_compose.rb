@@ -6,28 +6,28 @@ require_relative "../lib/private"
 class GlobalDockerCompose < Formula
   desc "Standardized and centralized Docker compose command"
   homepage ""
-  version "0.1.5"
+  version "0.2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wishabi/global-docker-compose/releases/download/v0.1.5/global_docker_compose_0.1.5_darwin_amd64.tar.gz", :using => :github_private_release
-      sha256 "bd58e5a925a80162a087b6e8ec99a7536a8904c40b547d38e9e4bdd62f1dc307"
+      url "https://github.com/wishabi/global-docker-compose/releases/download/v0.2/global_docker_compose_0.2_darwin_amd64.tar.gz", :using => :github_private_release
+      sha256 "61d5e8c2481c4feb8b186265f55bb1220f2a5d03a70728796624abe074cbc351"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wishabi/global-docker-compose/releases/download/v0.1.5/global_docker_compose_0.1.5_darwin_arm64.tar.gz", :using => :github_private_release
-      sha256 "bbd11a5af7ae7194c3094f0b7c7c0bdbd16fb53d3e8d7668eba473d90ff7f5bc"
+      url "https://github.com/wishabi/global-docker-compose/releases/download/v0.2/global_docker_compose_0.2_darwin_arm64.tar.gz", :using => :github_private_release
+      sha256 "54461aa8ed8046cbb171b00b80b02e4c0d9594f9cf99a92ffb3d10ec28286e25"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/wishabi/global-docker-compose/releases/download/v0.1.5/global_docker_compose_0.1.5_linux_amd64.tar.gz", :using => :github_private_release
-      sha256 "f4a397c44d57a417ec27a87cb4f43b8556a406a4f7ac160e57b706d4fe1166c1"
+      url "https://github.com/wishabi/global-docker-compose/releases/download/v0.2/global_docker_compose_0.2_linux_amd64.tar.gz", :using => :github_private_release
+      sha256 "75ed1914542458223fa12dd6b7ae6b2c9d28067af3b4c7c28dc325105f573f16"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wishabi/global-docker-compose/releases/download/v0.1.5/global_docker_compose_0.1.5_linux_arm64.tar.gz", :using => :github_private_release
-      sha256 "cc335aa84960d1016bee4ad1d1e7ec2ed204a0f96dec421fdfb9a910e6c05c7c"
+      url "https://github.com/wishabi/global-docker-compose/releases/download/v0.2/global_docker_compose_0.2_linux_arm64.tar.gz", :using => :github_private_release
+      sha256 "0a02a6a05e2bebbf00c5397f6c464ac748aadccd8145420b3c5a4ca12876e54c"
     end
   end
 
