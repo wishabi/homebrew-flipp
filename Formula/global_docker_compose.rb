@@ -5,8 +5,7 @@
 class GlobalDockerCompose < Formula
   desc "Standardized and centralized Docker compose command"
   homepage ""
-  version "0.5.1"
-  bottle :unneeded
+  version "0.5.2"
 
   on_macos do
     if Hardware::CPU.intel?
