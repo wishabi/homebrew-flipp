@@ -5,20 +5,20 @@
 class GlobalDockerCompose < Formula
   desc "Standardized and centralized Docker compose command"
   homepage ""
-  version "0.7.0"
+  version "0.7.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/wishabi/global-docker-compose/releases/download/v0.7.0/global_docker_compose_0.7.0_darwin_arm64.tar.gz"
-      sha256 "c1e94842be5722345585458d82c175ce68a3895531ad43f78881bde64d99a430"
+    if Hardware::CPU.intel?
+      url "https://github.com/wishabi/global-docker-compose/releases/download/v0.7.1/global_docker_compose_0.7.1_darwin_amd64.tar.gz"
+      sha256 "d6b4189510ce6d3cafceba4a21468b39a14a6055f34e1e18586e1b5c938f96bb"
 
       def install
         bin.install "global_docker_compose"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/wishabi/global-docker-compose/releases/download/v0.7.0/global_docker_compose_0.7.0_darwin_amd64.tar.gz"
-      sha256 "ebdf88a89616e35fb9e55b6763c480504377dae1701bbf87b600f88c07a69adb"
+    if Hardware::CPU.arm?
+      url "https://github.com/wishabi/global-docker-compose/releases/download/v0.7.1/global_docker_compose_0.7.1_darwin_arm64.tar.gz"
+      sha256 "9dcb3a33aadd66b533ef6ac24b14c7089a5ab2b9971fb311b1afc62e05ff7376"
 
       def install
         bin.install "global_docker_compose"
@@ -27,17 +27,17 @@ class GlobalDockerCompose < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/wishabi/global-docker-compose/releases/download/v0.7.0/global_docker_compose_0.7.0_linux_amd64.tar.gz"
-      sha256 "4f021cfb7b6112f59f6da8381f8e4ff9102fc495b5b1e589764d4771d63c4d24"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/wishabi/global-docker-compose/releases/download/v0.7.1/global_docker_compose_0.7.1_linux_arm64.tar.gz"
+      sha256 "6ee87eb0b838fd4216425a98dd592d9868572fb4bd125bdbfa0a71a1ecc0c217"
 
       def install
         bin.install "global_docker_compose"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wishabi/global-docker-compose/releases/download/v0.7.0/global_docker_compose_0.7.0_linux_arm64.tar.gz"
-      sha256 "027529540777cbc3b485563d2d3d2b69c9d0d1b85d8805084c9e640afffa6778"
+    if Hardware::CPU.intel?
+      url "https://github.com/wishabi/global-docker-compose/releases/download/v0.7.1/global_docker_compose_0.7.1_linux_amd64.tar.gz"
+      sha256 "63bf817c07bf71532a6139b6bdfa8ba6ef0ff61e9f975fc7e386b701691412b3"
 
       def install
         bin.install "global_docker_compose"
